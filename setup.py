@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="image-distillation",
     version="0.1",
@@ -15,4 +18,5 @@ setup(
     ],
     license="CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
     python_requires='>=3.9',
+    long_description=long_description,
 )
