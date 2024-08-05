@@ -1,9 +1,8 @@
 from setuptools import setup, find_packages
 
 
-
 setup(
-    name="image_distillation",
+    name="image-distillation",
     version="0.1",
     description="Python package for image datasets distillations via clustering and grid-based sampling",
     author="Serdar Biçici",
