@@ -11,5 +11,4 @@ Requires-Dist: numpy
 Requires-Dist: matplotlib
 Requires-Dist: scikit-learn
 
-# image-distillation
-Python package for image-datasets distillations
+Python package for image datasets distillations via clustering and grid-based sampling
