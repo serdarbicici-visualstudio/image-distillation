@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="image-distillation",
-    version="0.1.4",# change it
+    version="0.1.6",# change it
     description="Python package for image datasets distillations via clustering and grid-based sampling",
     author="Serdar Biçici",
     author_email="serdarbicici1@gmail.com",

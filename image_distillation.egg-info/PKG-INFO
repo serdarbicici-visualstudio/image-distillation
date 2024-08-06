@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: image-distillation
-Version: 0.1.4
+Version: 0.1.6
 Summary: Python package for image datasets distillations via clustering and grid-based sampling
 Home-page: https://github.com/serdarbicici-visualstudio/image-distillation
 Author: Serdar Biçici
