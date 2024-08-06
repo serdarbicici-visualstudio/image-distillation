@@ -6,6 +6,20 @@ from sklearn.decomposition import PCA
 
 
 class ImageClusterSampler:
+    """
+    Base class for image clustering and sampling
+    
+    args:
+        X: numpy array of shape (n_samples, height, width, channels)
+        y: numpy array of shape (n_samples,)
+        n_clusters: number of clusters to form
+        n_samples: number of samples to select from each cluster
+        
+    methods:
+        cluster_images: Cluster the images using KMeans and reduce the dimensionality using PCA
+        plot_clusters: Plot the clusters in the 2D PCA space
+        plot_selected_samples_on_clusters: Plot the selected samples on the clusters in the 2D PCA space
+    """
 
     def __init__(self, X, y, n_clusters, n_samples):
         """
@@ -71,6 +85,14 @@ class ImageClusterSampler:
 
 
 class GridSampler(ImageClusterSampler):
+    """
+    Class for grid-based sampling of the clusters
+    
+    methods:
+        plot_clusters_with_grids: Plot the clusters with grid lines in the 2D PCA space
+        get_grid_sampled_indices: Get the sampled indices from each cluster using grid sampling
+        get_selected_samples: Get the selected samples from each cluster using grid sampling
+    """
     
     def plot_clusters_with_grids(self):
         """
@@ -164,6 +186,16 @@ class GridSampler(ImageClusterSampler):
 
 
 class ParallelogramSampler(ImageClusterSampler):
+    """
+    Class for parallelogram-based sampling of the clusters
+
+    methods:
+        get_angle: Get the angle of the optimum parallelogram grid
+        get_grid_size: Get the grid size of the optimum parallelogram grid
+        plot_clusters_with_parallelograms: Plot the clusters with parallelogram grids in the 2D PCA space
+        get_parallelogram_sampled_indices: Get the sampled indices from each cluster using parallelogram sampling
+        get_selected_samples: Get the selected samples from each cluster using parallelogram sampling
+    """
 
     def get_angle(self):
         """
@@ -308,6 +340,15 @@ class ParallelogramSampler(ImageClusterSampler):
 
 
 class TriangularSampler(ImageClusterSampler):
+    """
+    Class for triangular-based sampling of the clusters
+
+    methods:
+        plot_clusters_with_triangles: Plot the clusters with triangular grids in the 2D PCA space
+        get_triangle_sampled_indices: Get the sampled indices from each cluster using triangular sampling
+        get_selected_samples: Get the selected samples from each cluster using triangular sampling
+        plot_selected_samples_on_clusters: Plot the selected samples on the clusters in the 2D PCA space
+    """
     
     def plot_clusters_with_triangles(self, grid_size=10):
         """
@@ -476,6 +517,14 @@ class TriangularSampler(ImageClusterSampler):
 
 
 class BrickSampler(ImageClusterSampler):
+    """
+    Class for brick-based sampling of the clusters
+
+    methods:
+        plot_clusters_with_bricks: Plot the clusters with brick grids in the 2D PCA space
+        get_brick_sampled_indices: Get the sampled indices from each cluster using brick sampling
+        get_selected_samples: Get the selected samples from each cluster using brick sampling
+    """
     
     def plot_clusters_with_bricks(self, grid_size=10):
         """
